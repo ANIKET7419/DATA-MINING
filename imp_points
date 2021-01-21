@@ -1,0 +1,23 @@
+in python
+non default argument can not follow default argument
+we can give the value to the parameter by name if all the names are present in the last
+But if we use *argc or **kwargs then the parameter pattern could be
+(non default)* (default)* (*argc) (non default or default)* (**kwargs)   // if we pass value to function then *argc consume all value ( not key-value pair thats for kwargs) when it gets its turn so
+
+
+we have to use named way for those parameters
+
+aniket(op=290,90) #it is wrong because named value is not given in the last
+aniket (19,op=3940,iop=35954) #correct way
+def aniket(op,op1=399,*argc,oppp): #it is also correct
+    pass
+def aniket():     # it is not correct bcz we should use doc string ''' or """ or pass keyword if we dont want to give any code to  a function
+
+    #  comment
+def aniket():
+    pass  //correct
+def aniket():
+    """""" // correct
+def aniket():
+    '''''' //correct
+help function give complete doc string and name of class and their function or simple function name and its doc string

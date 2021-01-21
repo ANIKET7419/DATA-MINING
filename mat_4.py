@@ -1,0 +1,10 @@
+import matplotlib.pyplot as p
+p.title("Two or more lines with different widths and colors with suitable legends ")
+p.xlabel('x-axis')
+p.ylabel('y-axis')
+p.yticks([10,15,20,25,30,35,40])
+p.xticks([10,15,20,25,30])
+p.plot([10,20,30],[20,40,10],color='b',linewidth=3)
+p.plot([10,20,30],[40,10,30],color='r',linewidth=5)
+p.legend(['line1-width-3','line2-width-5'])
+p.show()
