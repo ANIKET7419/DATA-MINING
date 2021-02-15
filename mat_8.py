@@ -1,5 +1,5 @@
 import matplotlib.pyplot as p
-
+import copy
 data = [[ 3.40022085, 7.70632498, 6.4097905, 10.51648577,
 7.5330039, 7.1123587, 12.77792868, 3.44773477],
 [ 11.24811149, 5.03778215, 6.65808464, 12.32220677, 7.45964195,
@@ -14,4 +14,9 @@ l=[0,0,0,0,0,0,0,0]
 for i in range(0,4):
  p.barh(y,data[i],0.5,color=color[i],left=l,edgecolor='black')
  l=[l[x]+data[i][x] for x in range(0,8)]
+x=[0,0,0,0,0,0,0,0]
+for i in range(4):
+ for j in range(0,8):
+          p.text(x[j]+.278 , j, s=str(round(data[i][j],2)), va='center')
+          x[j]+=data[i][j]
 p.show()
