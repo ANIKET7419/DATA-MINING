@@ -44,3 +44,33 @@ print(users['occupation'].drop_duplicates().size)
 print(users.describe())
 
 
+# Summarize only the occupation column
+
+
+print(users['occupation'].describe())
+
+
+# What is the mean age of users?
+
+print(users['age'].mean())
+
+
+# What is the mean age per occupation
+
+print(users.groupby(by='occupation')['age'].mean())
+
+# For each occupation, calculate the minimum and maximum ages
+print("--- MIN ---")
+print(users.groupby(by='occupation')['age'].min())
+
+print("--- MAX ---")
+print(users.groupby(by='occupation')['age'].max())
+
+
+# For each combination of occupation and gender, calculate the mean age
+
+print(users.groupby(by=['occupation','gender'])['age'].mean())
+
+
+
+
