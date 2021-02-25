@@ -80,5 +80,17 @@ print(f" Total Non Violated record : {rule4.sum()}")
 print(f" Total  Violated record : {rule4.shape[0]-rule4.sum()}")
 print(f" Mean : {rule4.mean()}")
 print(f" Median : {rule4.median()}")
-overall=pd.concat([rule_1,rule_2,rule_3,rule4])
-
+overall=pd.DataFrame({'Rule 1':rule_1.astype(int),'Rule 2':rule_2.astype(int),'Rule 3':rule_3.astype(int),'Rule 4':rule4.astype(int)})
+mea_=overall.mean()
+med=overall.median()
+total_no_v=overall.sum()
+v=overall.shape[0]-overall.sum()
+overall=overall.rename(columns={'Rule 1':'Mean','Rule 2':'Median','Rule 3':'No violated','Rule 4':'Violated'})
+overall=overall.drop(range(0,overall.shape[0]))
+overall['Mean']=mea_
+overall['Median']=med
+overall['No violated']=total_no_v
+overall['Violated']=v
+print(overall)
+overall.plot(kind='bar')
+plt.show()
