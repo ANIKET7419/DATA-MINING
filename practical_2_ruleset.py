@@ -1,3 +1,7 @@
+
+
+
+
 def check_status(val):
     count=0
     for i in val:
@@ -15,7 +19,6 @@ def rule_1(data):
     else:
         print("No Violation of rule 1")
     return status
-import pandas as pd
 def rule_2(data):
 
     fun = lambda x:x
