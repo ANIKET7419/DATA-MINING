@@ -25,6 +25,10 @@ for  j in data.columns:
 
 print(data)
 print("iii. ------------------------------------------------>>>>>>>>>>>>>>>>> ")
-ruleset.rule_1(data)
-ruleset.rule_2(data)
+rule1=ruleset.rule_1(data)
+rule2=ruleset.rule_2(data)
+rule3=ruleset.rule_3(data)
+rule4=ruleset.rule_4(data)
+rule5=ruleset.rule_5(data)
+
 
