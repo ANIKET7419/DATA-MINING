@@ -28,4 +28,3 @@ def rule_2(data):
     else:
         print("No Violation of rule 2")
     return status
-print('aniket')

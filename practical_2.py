@@ -24,8 +24,6 @@ for  j in data.columns:
             data.loc[i,j]='NA'
 
 print(data)
-
-
 print("iii. ------------------------------------------------>>>>>>>>>>>>>>>>> ")
 #ruleset.rule_1(data)
 ruleset.rule_2(data)
