@@ -71,12 +71,10 @@ def rule_5(data):
         try:
             float(x[0])
             float(x[1])
-            float(x[2])
-            float(x[3])
         except Exception as e:
             return False
-        return x[0]*x[1]>x[2]*x[3]
-    status = data.iloc[:,0:4].apply(fun,axis=1)
+        return x[0]<=x[1]
+    status = data.iloc[:,[0,2]].apply(fun,axis=1)
     count = check_status(status)
     if count != 0:
         print("Violation : Rule 5 is not satisfied ")
