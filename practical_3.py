@@ -19,7 +19,7 @@ for i in range(0,data.shape[1]):
 print("After Standardization ")
 print(data)
 print(' Iris DataSet ')
-data=pd.read_csv('https://raw.githubusercontent.com/edwindj/datacleaning/master/data/dirty_iris.csv')
+data=pd.read_csv('/root/PycharmProjects/DATA_MINING/venv/lib/python3.8/site-packages/sklearn/datasets/data/iris.csv')
 data.dropna(axis=0,inplace=True)
 for i in range(0,data.shape[1]):
     status = check(data.iloc[:,i])
