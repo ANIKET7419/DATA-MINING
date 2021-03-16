@@ -19,9 +19,9 @@ for i in range(0,data.shape[1]):
 print("After Standardization ")
 print(data)
 print(' Iris DataSet ')
-data=pd.read_csv('/root/PycharmProjects/DATA_MINING/venv/lib/python3.8/site-packages/sklearn/datasets/data/iris.csv')
+data=pd.read_csv('https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv')
 data.dropna(axis=0,inplace=True)
-for i in range(0,data.shape[1]):
+for i in range(0,data.shape[1]-1):
     status = check(data.iloc[:,i])
     if not status:
         temp=st.fit_transform(pd.DataFrame(data.iloc[:,i]))

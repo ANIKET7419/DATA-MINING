@@ -73,7 +73,7 @@ def rule_5(data):
             float(x[1])
         except Exception as e:
             return False
-        return x[0]<=x[1]
+        return x[0]>x[1]
     status = data.iloc[:,[0,2]].apply(fun,axis=1)
     count = check_status(status)
     if count != 0:
