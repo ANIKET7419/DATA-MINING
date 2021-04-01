@@ -95,7 +95,9 @@ k=int(input('Enter value of k '))
 d_c.clear()
 k_c.clear()
 n_c.clear()
-for i in range(0,k):
+k1=k
+k=x.size//k
+for i in range(0,k1):
          t1=x[:i*k]    # training set p1
          te=x[i*k:i*k+k] # testing set
          t2=x[i*k+k:]    # training set p2
