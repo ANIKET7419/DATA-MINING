@@ -18,12 +18,12 @@ data=pd.DataFrame(data,columns=encoder.columns_)
 print(data)
 
 
-print(" Minimum support 50 % and confidence 75 % ")
-frq_items = apriori(data, min_support=0.50,use_colnames=True)
-rules = association_rules(frq_items, metric="confidence", min_threshold=0.75)
+print(" Minimum support 5 % and confidence 9 % ")
+frq_items = apriori(data, min_support=0.05,use_colnames=True)
+rules = association_rules(frq_items, metric="confidence", min_threshold=0.09)
 print(rules)
 
-print(" Minimum support 60 % and confidence 60 % ")
-frq_items = apriori(data, min_support=0.60,use_colnames=True)
-rules = association_rules(frq_items, metric="confidence", min_threshold=0.60)
+print(" Minimum support 7 % and confidence 10 % ")
+frq_items = apriori(data, min_support=0.07,use_colnames=True)
+rules = association_rules(frq_items, metric="confidence", min_threshold=0.10)
 print(rules)
