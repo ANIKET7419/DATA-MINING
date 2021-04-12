@@ -12,8 +12,8 @@ data=[ [x if x[len(x)-1]!='\n' else x[:len(x)-1]  for x in y.split(',')] for y i
 print(data)
 encoder=TransactionEncoder()
 data=encoder.fit_transform(data)
-data=data.astype('int')
 print(data)
+data=data.astype('int')
 data=pd.DataFrame(data,columns=encoder.columns_)
 print(data)
 
