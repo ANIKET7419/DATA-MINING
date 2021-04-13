@@ -4,9 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier as DT
-from sklearn.metrics import confusion_matrix,accuracy_score
 from sklearn.model_selection import cross_val_score
-from  sklearn import tree as t
 from sklearn.naive_bayes import  GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 
