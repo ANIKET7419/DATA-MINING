@@ -7,7 +7,7 @@ n_samples =1500
 noisy_circles =make_circles(n_samples=n_samples)
 noisy_moons=make_moons(n_samples=n_samples)
 blobs = make_blobs(n_samples=n_samples)
-no_structures =np.random.rand(n_samples,2)
+no_structures =np.random.rand(n_samples,2),None
 datasets=[noisy_circles,noisy_moons,blobs,no_structures]
 for i,j in datasets:
   X=StandardScaler().fit_transform(i)
