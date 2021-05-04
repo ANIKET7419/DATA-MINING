@@ -6,8 +6,6 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import numpy as np
-from scipy.spatial import  distance_matrix
-from scipy.cluster import  hierarchy
 
 data=pd.read_csv('/home/ARTHAKUR/Computer_2/College/LAST_SEM/DM/HTRU_2.csv',header=None)
 
@@ -23,13 +21,13 @@ new_labels = hier.labels_
 plt.scatter(data[:,0],data[:,1],c = new_labels)
 plt.show()
 
-mat = distance_matrix(data,data)
+'''mat = distance_matrix(data,data)
 
 Z = hierarchy.linkage(mat,'average')
 
 dendro=hierarchy.dendrogram(Z)
 
-
+'''
 
 n_samples =1500
 noisy_circles =make_circles(n_samples=n_samples)
