@@ -21,3 +21,134 @@ def aniket():
 def aniket():
     '''''' //correct
 help function give complete doc string and name of class and their function or simple function name and its doc string
+
+
+
+
+
+
+
+
+
+def aniket(a,b,c=10):
+    print("hello")
+aniket(b=10,20,a=90)
+
+
+  File "/root/PycharmProjects/Test/main.py", line 3
+    aniket(b=10,20,a=90)
+                       ^
+SyntaxError: positional argument follows keyword argument
+
+
+
+
+
+def aniket(a,b,c=10,*argc):
+    print(argc)
+aniket(10,20,30,40,50)
+
+
+(40, 50)
+
+
+
+
+def aniket(a,b,c=10,*argc,op=90):
+    print(argc)
+aniket(10,20,30,40,50,10,901)
+
+
+
+(40, 50, 10, 901)
+
+
+
+
+def aniket(a,b,c=10,*argc,op):
+    print(argc)
+aniket(10,20,30,40,50,10,901)
+
+
+/root/PycharmProjects/Test/venv/bin/python /root/PycharmProjects/Test/main.py
+Traceback (most recent call last):
+  File "/root/PycharmProjects/Test/main.py", line 3, in <module>
+    aniket(10,20,30,40,50,10,901)
+TypeError: aniket() missing 1 required keyword-only argument: 'op'
+
+Process finished with exit code 1
+
+
+
+
+
+
+def aniket(a,b,c=10,*argc,op):
+    print(argc)
+aniket(10,20,30,40,50,10,op=901)
+
+
+
+(40, 50, 10)
+
+
+def aniket(a,b,c=10,*argc,op=193,**k):
+    print(argc)
+    print(k)
+aniket(10,20,30,40,50,10,hello=190,op=901,ooo=8995)
+
+
+(40, 50, 10)
+{'hello': 190, 'ooo': 8995}
+
+
+
+
+def aniket(a,b,c=10,*argc,op,**k):
+    print(argc)
+    print(k)
+aniket(10,20,30,40,50,10,hello=190,op=901,ooo=8995)
+
+
+
+/root/PycharmProjects/Test/venv/bin/python /root/PycharmProjects/Test/main.py
+(40, 50, 10)
+{'hello': 190, 'ooo': 8995}
+
+Process finished with exit code 0
+
+
+
+
+def aniket(a,b,c=10,*argc,op1=90,op,**k):
+    print(argc)
+    print(k)
+aniket(10,20,30,40,50,10,hello=190,op=901,ooo=8995)
+
+
+
+/root/PycharmProjects/Test/venv/bin/python /root/PycharmProjects/Test/main.py
+(40, 50, 10)
+{'hello': 190, 'ooo': 8995}
+
+Process finished with exit code 0
+
+
+
+def aniket(a,b=10,c,*argc,op1=90,op,**k):
+    pass
+    
+    
+    
+    /root/PycharmProjects/Test/venv/bin/python /root/PycharmProjects/Test/main.py
+  File "/root/PycharmProjects/Test/main.py", line 1
+    def aniket(a,b=10,c,*argc,op1=90,op,**k):
+                        ^
+SyntaxError: non-default argument follows default argument
+
+Process finished with exit code 1
+
+
+
+
+
